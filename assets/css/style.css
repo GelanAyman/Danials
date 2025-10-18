@@ -63,6 +63,7 @@ a {
 }
 .header .overlay {
     background-color: rgba(0,0,0,0.5);
+    max-width: 100%;
 }
 .header .social-links i {
     width: 40px;
