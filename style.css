@@ -1,0 +1,343 @@
+/* ? =====> General */
+body {
+    font-family: "Poppins", sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Montserrat", sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.title {
+    font-weight: 900;
+}
+.title h2::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url("../../imgs/dots.png");
+    background-repeat: repeat;
+    bottom: -8px;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* ? =====> Custom classes */
+.w-fit {
+    width: fit-content;
+}
+.bg-secondary-color {
+    background-color: #F7F7F7;
+}
+:root {
+    --default-duration: 0.5s;
+}
+
+/* ! =====> Navbar section */
+.navbar .nav-link::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2px;
+    left: 7px;
+    bottom: 6px;
+    background-color: #000;
+    transition: width var(--default-duration);
+}
+.navbar .nav-link.active::before {
+    width: 80%;
+}
+.navbar .navbar-toggler {
+    --bs-navbar-toggler-border-color: #fff;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ~ =====> Header section */
+.header {
+    background-image: url("../../imgs/header-bg.jpg");
+}
+.header .overlay {
+    background-color: rgba(0,0,0,0.5);
+    max-width: 100%;
+}
+.header .social-links i {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+/* ^ =====> About */
+.about .about-img::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 60%;
+    background-image: url("../../imgs/dots.png");
+    z-index: -1;
+    bottom: -40px;
+    left: -16px;
+}
+.about img {
+    border-radius: 8px;
+}
+.about .progress {
+    height: 24px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2) inset;
+}
+.about .progress-bar {
+    border-radius: 8px;
+}
+.about .progress-skill {
+    font-size: 14px;
+    top: 4px;
+    left: 12px;
+}
+.about .progress-percentage {
+    top: 4px;
+    font-size: 14px;
+}
+.about .buttons a {
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+.about .buttons .contact {
+    margin-left: 8px;
+}
+.about .buttons {
+    padding-top: 20px;
+}
+.about .buttons .cv {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    transition: color var(--default-duration), background-color var(--default-duration);
+}
+.about .buttons .contact {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    transition: color var(--default-duration), background-color var(--default-duration);
+}
+.about .buttons .cv:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+.about .buttons .contact:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* & =====> Services */
+.services i {
+    width: 80px;
+    height: 80px;
+    background-color: #F4F4F4;
+    font-size: 24px;
+    transition: color var(--default-duration), background-color var(--default-duration);
+}
+.services .card {
+    --bs-border-radius: 0.5rem;
+    --bs-border-color-translucent: none;
+}
+.services .card:hover i{
+    background-color: #000;
+    color: #F4F4F4;
+}
+
+/* * =====> Portfolio */
+.portfolio .layer {
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    opacity: 0;
+    transition: opacity var(--default-duration);
+}
+.portfolio .layer i {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    transition: color var(--default-duration), background-color var(--default-duration);
+}
+.portfolio .layer i:hover {
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+.portfolio .layer h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.portfolio .prod:hover .layer {
+    opacity: 100;
+}
+/* ***** filter */
+input[type="radio"] {
+    display: none;
+}
+.filter-label {
+    cursor: pointer;
+}
+
+input#all:checked ~ .filter label[for="all"],
+input#brand:checked ~ .filter label[for="brand"],
+input#design:checked ~ .filter label[for="design"],
+input#graphic:checked ~ .filter label[for="graphic"] {
+  border-bottom: 2px solid #000;
+}
+.items > div {
+  display: block;
+}
+
+#design:checked ~ .items > div {
+  display: none;
+}
+#design:checked ~ .items > .design {
+  display: block;
+}
+
+#brand:checked ~ .items > div {
+  display: none;
+}
+#brand:checked ~ .items > .brand {
+  display: block;
+}
+
+#graphic:checked ~ .items > div {
+  display: none;
+}
+#graphic:checked ~ .items > .graphic {
+  display: block;
+}
+
+#all:checked ~ .items > div {
+  display: block;
+}
+  
+
+
+/* ! =====> Work */
+.work .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #D6D6D6;
+}
+.work img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.work p {
+    color: #7C8889;
+}
+.work span {
+    font-size: 12px;
+}
+
+/* ? =====> Counter */
+.counter i {
+    font-size: 30px;
+}
+.counter h3 {
+    font-weight: 900;
+}
+
+/* ~ =====> Teams */
+.teams .inner .text {
+    background-color: #5B5B5B;
+    border-radius: 0px 0px 8px 8px;
+}
+.teams .img {
+    overflow: hidden;
+}
+.teams img {
+    transition: transform var(--default-duration);
+}
+.teams .layer {
+    top: 4px;
+    right: 4px;
+    left: 4px;
+    bottom: 4px;
+    transform: scale(0.7) rotateY(180deg);
+    opacity: 0;
+    transition: opacity var(--default-duration), transform var(--default-duration);
+}
+.teams .layer i {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+.teams .layer i:hover {
+    background-color: #fff;
+    color: #000;
+}
+.teams .img:hover .layer,
+.teams:has(.text:hover) .layer{
+    opacity: 90%;
+    transform: scale(1) rotateY(0deg);
+}
+.teams .img:hover img {
+    transform: scale(1.3);
+}
+
+
+
+/* ^ =====> Contact */
+.contact i {
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    background-color: #F4F4F4;
+    transition: color var(--default-duration), background-color var(--default-duration);
+}
+.contact .contact-card:hover i {
+    color: #F4F4F4;
+    background-color: #000;
+}
+.contact input, 
+.contact textarea {
+    background-color: #F4F4F4;
+}
+.contact input:focus,
+.contact textarea:focus {
+    border: 1px solid #dee2e6;
+    box-shadow: none;
+    background-color: #F4F4F4;
+}
+.contact button {
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    font-size: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 24px;
+    transition: color var(--default-duration), background-color var(--default-duration);
+}
+.contact button:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.contact .form-control {
+    transition: none;
+}
+.contact form div {
+    margin-top: 20px;
+}
